@@ -1,22 +1,32 @@
-from config import VIDEO_PATH
-from core.video_reader import VideoReader
 import cv2
+from config import VIDEO_PATH
+from utils.drawing import draw_boxes
+from core.video_reader import VideoReader
+from core.object_detector import ObjectDetector
+
 
 def main():
-    reader=VideoReader(VIDEO_PATH)
+    target_classes = {2, 5, 7}  # car, bus, truck
+    detector = ObjectDetector()
+    class_names = detector.model.names
+    reader = VideoReader(VIDEO_PATH)
 
     while True:
-        frame=reader.read_frame()
+        frame = reader.read_frame()
         if frame is None:
             break
 
-        cv2.imshow("Video Feed",frame)
+        results = detector.detect(frame)
+        draw_boxes(frame, results, class_names, target_classes)
 
-        if cv2.waitKey(30) == ord('q'):
+        cv2.imshow("Traffic Video", frame)
+
+        if cv2.waitKey(30) & 0XFF == ord('q'):
             break
 
     reader.release()
     cv2.destroyAllWindows()
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     main()
