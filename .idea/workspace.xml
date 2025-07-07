@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af4f8e3a-8ac1-4a20-9ffa-6080ebb6fd31" name="Changes" comment="Read and Show Video frame by frame with OpenCV.">
-      <change afterPath="$PROJECT_DIR$/core/object_detector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/drawing.py" afterDir="false" />
+    <list default="true" id="af4f8e3a-8ac1-4a20-9ffa-6080ebb6fd31" name="Changes" comment="Detect All Cars, Buses and Trucks in Video.">
+      <change afterPath="$PROJECT_DIR$/core/tracker.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -52,8 +51,9 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.drawing.executor": "Debug",
-    "Python.main.executor": "Run",
+    "Python.main.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/ArminYaghboubi/PycharmProjects/car_speed_detector/video",
@@ -112,7 +112,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1751815050192</updated>
-      <workItem from="1751815050638" duration="10655000" />
+      <workItem from="1751815050638" duration="17147000" />
     </task>
     <task id="LOCAL-00001" summary="Read and Show Video frame by frame with OpenCV.">
       <option name="closed" value="true" />
@@ -122,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751820067190</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Detect All Cars, Buses and Trucks in Video.">
+      <option name="closed" value="true" />
+      <created>1751833289387</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1751833289387</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,10 +138,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Read and Show Video frame by frame with OpenCV." />
-    <option name="LAST_COMMIT_MESSAGE" value="Read and Show Video frame by frame with OpenCV." />
+    <MESSAGE value="Detect All Cars, Buses and Trucks in Video." />
+    <option name="LAST_COMMIT_MESSAGE" value="Detect All Cars, Buses and Trucks in Video." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/core/tracker.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/car_speed_detector$drawing.coverage" NAME="drawing Coverage Results" MODIFIED="1751823625860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
-    <SUITE FILE_PATH="coverage/car_speed_detector$main.coverage" NAME="main Coverage Results" MODIFIED="1751833018394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/car_speed_detector$main.coverage" NAME="main Coverage Results" MODIFIED="1751907213081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
