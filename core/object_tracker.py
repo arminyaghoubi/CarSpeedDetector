@@ -11,22 +11,22 @@ class ObjectTracker:
         updated_objects = {}
         ids = set()
 
-        for cx, cy in detections:
+        for cx, cy, box, class_id, confidence in detections:
             matched_id = None
             min_distance = float("inf")
 
-            for object_id, (px, py) in self.objects.items():
+            for object_id, (px, py, b, clsid, conf) in self.objects.items():
                 distance = numpy.hypot(cx - px, cy - py)
                 if distance < self.distance_threshold and object_id not in ids and distance < min_distance:
                     matched_id = object_id
                     min_distance = distance
 
             if matched_id is not None:
-                updated_objects[matched_id] = (cx, cy)
+                updated_objects[matched_id] = (cx, cy, box, class_id, confidence)
                 ids.add(matched_id)
             else:
-                updated_objects[self.next_id] = (cx, cy)
+                updated_objects[self.next_id] = (cx, cy, box, class_id, confidence)
                 self.next_id += 1
 
-        self.objects=updated_objects
+        self.objects = updated_objects
         return self.objects
